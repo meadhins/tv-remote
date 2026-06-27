@@ -15,7 +15,7 @@
         android:textColor="#ffffff"
         android:textSize="18sp"
         android:gravity="center"
-        android:layout_marginBottom="32dp"/>
+        android:layout_marginBottom="24dp"/>
 
     <Button
         android:id="@+id/powerBtn"
@@ -25,17 +25,32 @@
         android:textSize="22sp"
         android:backgroundTint="#cc0000"
         android:textColor="#ffffff"
-        android:layout_marginBottom="24dp"/>
+        android:layout_marginBottom="16dp"/>
 
-    <Button
-        android:id="@+id/foundBtn"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="✓ THIS ONE WORKED!"
-        android:textSize="16sp"
-        android:backgroundTint="#007700"
-        android:textColor="#ffffff"
-        android:layout_marginBottom="32dp"/>
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/prevBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="◀ PREV"
+            android:backgroundTint="#555555"
+            android:textColor="#ffffff"
+            android:layout_marginEnd="16dp"/>
+
+        <Button
+            android:id="@+id/foundBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="✓ WORKED!"
+            android:backgroundTint="#007700"
+            android:textColor="#ffffff"/>
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/codeText"
