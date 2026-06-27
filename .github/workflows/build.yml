@@ -29,6 +29,7 @@ jobs:
           cp $GITHUB_WORKSPACE/app/build.gradle /root/tvremote/app/
           cp $GITHUB_WORKSPACE/build.gradle /root/tvremote/
           cp $GITHUB_WORKSPACE/settings.gradle /root/tvremote/
+          cp $GITHUB_WORKSPACE/gradle.properties /root/tvremote/
           cd /root/tvremote
           sdkmanager "build-tools;34.0.0" "platforms;android-34"
           gradle wrapper
