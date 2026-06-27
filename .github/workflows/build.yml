@@ -7,25 +7,25 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    container:
+      image: mingc/android-build-box:latest
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up JDK 17
-        uses: actions/setup-java@v4
-        with:
-          java-version: '17'
-          distribution: 'temurin'
-
-      - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v3
-        with:
-          gradle-version: '8.0'
-
       - name: Build APK
-        run: gradle assembleDebug
+        run: |
+          cd /root
+          mkdir -p tvremote/app/src/main/java/com/tvremote
+          mkdir -p tvremote/app/src/main/res/layout
+          cp -r $GITHUB_WORKSPACE/app/src/main/java/com/tvremote/MainActivity.java tvremote/app/src/main/java/com/tvremote/
+          cp -r $GITHUB_WORKSPACE/app/src/main/res/layout/activity_main.xml tvremote/app/src/main/res/layout/
+          cp -r $GITHUB_WORKSPACE/app/src/main/AndroidManifest.xml tvremote/app/src/main/
+          cd tvremote
+          gradle wrapper
+          ./gradlew assembleDebug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: tv-remote-apk
-          path: app/build/outputs/apk/debug/app-debug.apk
+          path: /root/tvremote/app/build/outputs/apk/debug/app-debug.apk
