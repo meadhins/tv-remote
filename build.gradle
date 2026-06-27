@@ -7,35 +7,3 @@ buildscript {
         classpath 'com.android.tools.build:gradle:8.1.0'
     }
 }
-
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-    }
-}
-
-plugins {
-    id 'com.android.application'
-}
-
-android {
-    namespace 'com.tvremote'
-    compileSdk 34
-    defaultConfig {
-        applicationId "com.tvremote"
-        minSdk 19
-        targetSdk 34
-        versionCode 1
-        versionName "1.0"
-    }
-    buildTypes {
-        release {
-            minifyEnabled false
-        }
-    }
-}
-
-dependencies {
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-}
