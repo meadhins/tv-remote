@@ -14,15 +14,17 @@ jobs:
 
       - name: Build APK
         run: |
-          cd /root
-          mkdir -p tvremote/app/src/main/java/com/tvremote
-          mkdir -p tvremote/app/src/main/res/layout
-          cp -r $GITHUB_WORKSPACE/app/src/main/java/com/tvremote/MainActivity.java tvremote/app/src/main/java/com/tvremote/
-          cp -r $GITHUB_WORKSPACE/app/src/main/res/layout/activity_main.xml tvremote/app/src/main/res/layout/
-          cp -r $GITHUB_WORKSPACE/app/src/main/AndroidManifest.xml tvremote/app/src/main/
-          cd tvremote
-          gradle wrapper
-          ./gradlew assembleDebug
+          mkdir -p /root/tvremote/app/src/main/java/com/tvremote
+          mkdir -p /root/tvremote/app/src/main/res/layout
+          cp $GITHUB_WORKSPACE/app/src/main/java/com/tvremote/MainActivity.java /root/tvremote/app/src/main/java/com/tvremote/
+          cp $GITHUB_WORKSPACE/app/src/main/res/layout/activity_main.xml /root/tvremote/app/src/main/res/layout/
+          cp $GITHUB_WORKSPACE/app/src/main/AndroidManifest.xml /root/tvremote/app/src/main/
+          cp $GITHUB_WORKSPACE/app/build.gradle /root/tvremote/app/
+          cp $GITHUB_WORKSPACE/build.gradle /root/tvremote/
+          cp $GITHUB_WORKSPACE/settings.gradle /root/tvremote/
+          cd /root/tvremote
+          sdkmanager "build-tools;34.0.0" "platforms;android-34"
+          gradlew assembleDebug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
