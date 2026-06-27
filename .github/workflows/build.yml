@@ -14,10 +14,10 @@ jobs:
 
       - name: Install Gradle
         run: |
-          wget -q https://services.gradle.org/distributions/gradle-8.0-bin.zip
-          unzip -q gradle-8.0-bin.zip -d /opt
-          export PATH=$PATH:/opt/gradle-8.0/bin
-          echo "PATH=$PATH:/opt/gradle-8.0/bin" >> $GITHUB_ENV
+          wget -q https://services.gradle.org/distributions/gradle-8.5-bin.zip
+          unzip -q gradle-8.5-bin.zip -d /opt
+          export PATH=$PATH:/opt/gradle-8.5/bin
+          echo "PATH=$PATH:/opt/gradle-8.5/bin" >> $GITHUB_ENV
 
       - name: Build APK
         run: |
