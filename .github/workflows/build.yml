@@ -24,7 +24,8 @@ jobs:
           cp $GITHUB_WORKSPACE/settings.gradle /root/tvremote/
           cd /root/tvremote
           sdkmanager "build-tools;34.0.0" "platforms;android-34"
-          gradlew assembleDebug
+          gradle wrapper --gradle-version 8.0
+          ./gradlew assembleDebug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
