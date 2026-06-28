@@ -45,7 +45,7 @@ public class MainActivity extends Activity {
         TextView txtVolNum = findViewById(R.id.txtVolNum);
         TextView txtChNum = findViewById(R.id.txtChNum);
 
-        // Core Command Sets
+        // Action Dispatches
         findViewById(R.id.btnPower).setOnClickListener(v -> send(0x08));
         findViewById(R.id.btnMute).setOnClickListener(v -> send(0x09));
         findViewById(R.id.btnInput).setOnClickListener(v -> send(0x0B));
@@ -68,16 +68,18 @@ public class MainActivity extends Activity {
             send(0x00);
         });
         
-        findViewById(R.id.btnChDown).setOnClickListener(v -> {
+        findViewById(v -> {
             if (internalChannel > 1) internalChannel--;
             txtChNum.setText(String.valueOf(internalChannel));
             send(0x01);
-        });
+        }).setOnClickListener(v -> send(0x01)); // Safety remap hook
 
-        // Navigation Engine Keys
-        findViewById(R.id.btnMenu).setOnClickListener(v -> send(0x43));
+        // Bottom Deck Navigation & Menu standard mapping fix (0x40)
+        findViewById(R.id.btnMenu).setOnClickListener(v -> send(0x40));
         findViewById(R.id.btnHome).setOnClickListener(v -> send(0x79));
         findViewById(R.id.btnBack).setOnClickListener(v -> send(0x28));
+        
+        // Directional Matrix Emitters
         findViewById(R.id.btnUp).setOnClickListener(v -> send(0x40));
         findViewById(R.id.btnDown).setOnClickListener(v -> send(0x41));
         findViewById(R.id.btnLeft).setOnClickListener(v -> send(0x07));
