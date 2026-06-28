@@ -27,3 +27,4 @@
             <Button android:id="@+id/btnMute"
                 android:layout_width="90dp" android:layout_height="60dp"
                 android:text="Mute"
+                </ScrollView>
