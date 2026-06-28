@@ -3,7 +3,6 @@ package com.tvremote;
 import android.app.Activity;
 import android.hardware.ConsumerIrManager;
 import android.os.Bundle;
-import android.widget.Button;
 import android.content.Context;
 
 public class MainActivity extends Activity {
@@ -54,15 +53,5 @@ public class MainActivity extends Activity {
         findViewById(R.id.btnLeft).setOnClickListener(v -> send(0x07));
         findViewById(R.id.btnRight).setOnClickListener(v -> send(0x06));
         findViewById(R.id.btnOk).setOnClickListener(v -> send(0x44));
-        findViewById(R.id.btn0).setOnClickListener(v -> send(0x10));
-        findViewById(R.id.btn1).setOnClickListener(v -> send(0x11));
-        findViewById(R.id.btn2).setOnClickListener(v -> send(0x12));
-        findViewById(R.id.btn3).setOnClickListener(v -> send(0x13));
-        findViewById(R.id.btn4).setOnClickListener(v -> send(0x14));
-        findViewById(R.id.btn5).setOnClickListener(v -> send(0x15));
-        findViewById(R.id.btn6).setOnClickListener(v -> send(0x16));
-        findViewById(R.id.btn7).setOnClickListener(v -> send(0x17));
-        findViewById(R.id.btn8).setOnClickListener(v -> send(0x18));
-        findViewById(R.id.btn9).setOnClickListener(v -> send(0x19));
     }
 }
