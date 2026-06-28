@@ -23,14 +23,13 @@ jobs:
         run: |
           mkdir -p /root/tvremote/app/src/main/java/com/tvremote
           mkdir -p /root/tvremote/app/src/main/res/layout
-          cp $GITHUB_WORKSPACE/app/src/main/activity_main.xml /root/tvremote/app/src/main/res/layout/
-          cp -r $GITHUB_WORKSPACE/app/src/main/res/ /root/tvremote/app/src/main/
+          cp $GITHUB_WORKSPACE/app/src/main/java/com/tvremote/MainActivity.java /root/tvremote/app/src/main/java/com/tvremote/
+          cp $GITHUB_WORKSPACE/app/src/main/activity_main.xml /root/tvremote/app/src/main/res/layout/activity_main.xml
           cp $GITHUB_WORKSPACE/app/src/main/AndroidManifest.xml /root/tvremote/app/src/main/
           cp $GITHUB_WORKSPACE/app/build.gradle /root/tvremote/app/
           cp $GITHUB_WORKSPACE/build.gradle /root/tvremote/
           cp $GITHUB_WORKSPACE/settings.gradle /root/tvremote/
           cp $GITHUB_WORKSPACE/gradle.properties /root/tvremote/
-          grep btn /root/tvremote/app/src/main/res/layout/activity_main.xml || true
           cd /root/tvremote
           sdkmanager "build-tools;34.0.0" "platforms;android-34"
           gradle wrapper
