@@ -68,22 +68,57 @@ public class MainActivity extends Activity {
             send(0x00);
         });
         
-        findViewById(v -> {
+@Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        irManager = (ConsumerIrManager) getSystemService(Context.CONSUMER_IR_SERVICE);
+
+        TextView txtVolNum = findViewById(R.id.txtVolNum);
+        TextView txtChNum = findViewById(R.id.txtChNum);
+
+        // Primary Structural Power & Input Actions
+        findViewById(R.id.btnPower).setOnClickListener(v -> send(0x08));
+        findViewById(R.id.btnMute).setOnClickListener(v -> send(0x09));
+        findViewById(R.id.btnInput).setOnClickListener(v -> send(0x0B));
+        
+        // Horizontal Vol Controller Loops
+        findViewById(R.id.btnVolUp).setOnClickListener(v -> {
+            if (internalVolume < 100) internalVolume += 2;
+            txtVolNum.setText(String.valueOf(internalVolume));
+            send(0x02);
+        });
+        
+        findViewById(R.id.btnVolDown).setOnClickListener(v -> {
+            if (internalVolume > 0) internalVolume -= 2;
+            txtVolNum.setText(String.valueOf(internalVolume));
+            send(0x03);
+        });
+        
+        // Horizontal Ch Controller Loops
+        findViewById(R.id.btnChUp).setOnClickListener(v -> {
+            internalChannel++;
+            txtChNum.setText(String.valueOf(internalChannel));
+            send(0x00);
+        });
+        
+        // FIXED: Correct ID lookup and clean lambda mapping
+        findViewById(R.id.btnChDown).setOnClickListener(v -> {
             if (internalChannel > 1) internalChannel--;
             txtChNum.setText(String.valueOf(internalChannel));
             send(0x01);
-        }).setOnClickListener(v -> send(0x01)); // Safety remap hook
+        });
 
-        // Bottom Deck Navigation & Menu standard mapping fix (0x40)
+        // Bottom Deck Navigation & Config Menu Standard System (0x40 Hooked)
         findViewById(R.id.btnMenu).setOnClickListener(v -> send(0x40));
         findViewById(R.id.btnHome).setOnClickListener(v -> send(0x79));
         findViewById(R.id.btnBack).setOnClickListener(v -> send(0x28));
         
-        // Directional Matrix Emitters
+        // Fluid Dynamic Radial Wheel Center Cluster Keys
         findViewById(R.id.btnUp).setOnClickListener(v -> send(0x40));
         findViewById(R.id.btnDown).setOnClickListener(v -> send(0x41));
         findViewById(R.id.btnLeft).setOnClickListener(v -> send(0x07));
         findViewById(R.id.btnRight).setOnClickListener(v -> send(0x06));
         findViewById(R.id.btnOk).setOnClickListener(v -> send(0x44));
     }
-}
