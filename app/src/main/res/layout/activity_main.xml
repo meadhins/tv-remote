@@ -13,9 +13,9 @@
         android:layout_height="wrap_content"
         android:text="Initializing..."
         android:textColor="#ffffff"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:gravity="center"
-        android:layout_marginBottom="24dp"/>
+        android:layout_marginBottom="16dp"/>
 
     <Button
         android:id="@+id/powerBtn"
@@ -25,13 +25,13 @@
         android:textSize="22sp"
         android:backgroundTint="#cc0000"
         android:textColor="#ffffff"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="12dp"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginBottom="16dp">
+        android:layout_marginBottom="12dp">
 
         <Button
             android:id="@+id/prevBtn"
@@ -40,7 +40,7 @@
             android:text="◀ PREV"
             android:backgroundTint="#555555"
             android:textColor="#ffffff"
-            android:layout_marginEnd="16dp"/>
+            android:layout_marginEnd="12dp"/>
 
         <Button
             android:id="@+id/foundBtn"
@@ -52,13 +52,39 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <EditText
+            android:id="@+id/jumpInput"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:hint="Jump to #"
+            android:textColor="#ffffff"
+            android:textColorHint="#888888"
+            android:inputType="number"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/jumpBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GO"
+            android:backgroundTint="#0055cc"
+            android:textColor="#ffffff"/>
+
+    </LinearLayout>
+
     <TextView
         android:id="@+id/codeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
         android:textColor="#aaffaa"
-        android:textSize="14sp"
+        android:textSize="13sp"
         android:gravity="center"/>
 
 </LinearLayout>
