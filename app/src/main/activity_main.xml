@@ -2,259 +2,273 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0d0d1f"
+    android:background="#05050a"
     android:orientation="vertical"
-    android:padding="20dp">
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="9:41"
-            android:textColor="#aaaaaa"
-            android:textSize="12sp"
-            android:textStyle="bold" />
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="IR 38 kHz"
-                android:textColor="#7af5c8"
-                android:textSize="10sp"
-                android:background="#15ffffff"
-                android:paddingHorizontal="8dp"
-                android:paddingVertical="3dp" />
-        </LinearLayout>
-    </RelativeLayout>
+    android:padding="24dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginTop="12dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Living Room"
             android:textColor="#ffffff"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:fontFamily="sans-serif-medium" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Connected • LG OLED TV"
+            android:text="LG OLED • 38KHZ"
             android:textColor="#7af5c8"
-            android:textSize="12sp"
-            android:layout_marginTop="2dp" />
+            android:textSize="11sp"
+            android:letterSpacing="0.05"
+            android:layout_marginTop="4dp" />
     </LinearLayout>
 
     <RelativeLayout
-        android:layout_width="110dp"
-        android:layout_height="110dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
-        android:background="@android:color/transparent">
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center">
 
-        <ImageButton
-            android:id="@+id/btnPower"
-            android:layout_width="68dp"
-            android:layout_height="68dp"
-            android:layout_centerInParent="true"
-            android:background="?android:attr/selectableItemBackgroundBorderless"
-            android:scaleType="centerInside"
-            android:src="@android:drawable/ic_lock_power_off"
-            android:tint="#7af5c8" />
+        <RelativeLayout
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:background="@drawable/bg_wheel">
+
+            <Button
+                android:id="@+id/btnUp"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:text="▲"
+                android:textColor="#6d6d80"
+                android:textSize="16sp"
+                android:background="?android:attr/selectableItemBackgroundBorderless" />
+
+            <Button
+                android:id="@+id/btnLeft"
+                android:layout_width="40dp"
+                android:layout_height="60dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:text="◀"
+                android:textColor="#6d6d80"
+                android:textSize="16sp"
+                android:background="?android:attr/selectableItemBackgroundBorderless" />
+
+            <Button
+                android:id="@+id/btnOk"
+                android:layout_width="76dp"
+                android:layout_height="76dp"
+                android:layout_centerInParent="true"
+                android:text="OK"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif-black"
+                android:background="@drawable/bg_wheel"
+                android:backgroundTint="#181830" />
+
+            <Button
+                android:id="@+id/btnRight"
+                android:layout_width="40dp"
+                android:layout_height="60dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:text="▶"
+                android:textColor="#6d6d80"
+                android:textSize="16sp"
+                android:background="?android:attr/selectableItemBackgroundBorderless" />
+
+            <Button
+                android:id="@+id/btnDown"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="16dp"
+                android:text="▼"
+                android:textColor="#6d6d80"
+                android:textSize="16sp"
+                android:background="?android:attr/selectableItemBackgroundBorderless" />
+        </RelativeLayout>
     </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_marginTop="24dp"
-        android:orientation="horizontal"
-        android:weightSum="3">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.8"
-            android:gravity="center"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="VOL"
-                android:textColor="#555555"
-                android:textSize="10sp" />
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
             <Button
-                android:id="@+id/btnVolUp"
-                android:layout_width="44dp"
+                android:id="@+id/btnPower"
+                android:layout_width="0dp"
                 android:layout_height="44dp"
-                android:text="+"
+                android:layout_weight="1"
+                android:layout_marginRight="6dp"
+                android:text="Power"
                 android:textColor="#ffffff"
-                android:textSize="18sp"
-                android:backgroundTint="#15ffffff" />
-            <TextView
-                android:id="@+id/txtVolNum"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="28"
-                android:textColor="#7af5c8"
-                android:textSize="16sp"
-                android:layout_marginVertical="8dp" />
+                android:background="@drawable/bg_pill" />
             <Button
-                android:id="@+id/btnVolDown"
-                android:layout_width="44dp"
+                android:id="@+id/btnInput"
+                android:layout_width="0dp"
                 android:layout_height="44dp"
-                android:text="−"
+                android:layout_weight="1"
+                android:layout_marginLeft="6dp"
+                android:text="Input"
                 android:textColor="#ffffff"
-                android:textSize="18sp"
-                android:backgroundTint="#15ffffff" />
+                android:background="@drawable/bg_pill" />
         </LinearLayout>
 
         <RelativeLayout
-            android:layout_width="0dp"
-            android:layout_height="170dp"
-            android:layout_weight="1.4"
-            android:layout_gravity="center_vertical">
-
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_pill"
+            android:layout_marginBottom="12dp"
+            android:paddingHorizontal="16dp">
             <Button
-                android:id="@+id/btnUp"
-                android:layout_width="54dp"
-                android:layout_height="46dp"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:text="↑"
-                android:textColor="#cccccc"
-                android:backgroundTint="#15ffffff" />
-
-            <Button
-                android:id="@+id/btnLeft"
-                android:layout_width="54dp"
-                android:layout_height="46dp"
-                android:layout_centerVertical="true"
+                android:id="@+id/btnVolDown"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
                 android:layout_alignParentLeft="true"
-                android:text="←"
-                android:textColor="#cccccc"
-                android:backgroundTint="#15ffffff" />
-
-            <Button
-                android:id="@+id/btnOk"
-                android:layout_width="64dp"
-                android:layout_height="64dp"
-                android:layout_centerInParent="true"
-                android:text="OK"
-                android:textColor="#f0c040"
-                android:backgroundTint="#30b48200" />
-
-            <Button
-                android:id="@+id/btnRight"
-                android:layout_width="54dp"
-                android:layout_height="46dp"
                 android:layout_centerVertical="true"
-                android:layout_alignParentRight="true"
-                android:text="→"
-                android:textColor="#cccccc"
-                android:backgroundTint="#15ffffff" />
-
+                android:text="−"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:background="?android:attr/selectableItemBackgroundBorderless" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/txtVolNum"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:text="28"
+                    android:textColor="#ffffff"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif-medium" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="VOLUME"
+                    android:textColor="#6d6d80"
+                    android:textSize="11sp"
+                    android:letterSpacing="0.05"
+                    android:layout_marginLeft="8dp" />
+            </LinearLayout>
             <Button
-                android:id="@+id/btnDown"
-                android:layout_width="54dp"
-                android:layout_height="46dp"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:text="↓"
-                android:textColor="#cccccc"
-                android:backgroundTint="#15ffffff" />
+                android:id="@+id/btnVolUp"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="+"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:background="?android:attr/selectableItemBackgroundBorderless" />
         </RelativeLayout>
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.8"
-            android:gravity="center"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="CH"
-                android:textColor="#555555"
-                android:textSize="10sp" />
-            <Button
-                android:id="@+id/btnChUp"
-                android:layout_width="44dp"
-                android:layout_height="44dp"
-                android:text="↑"
-                android:textColor="#ffffff"
-                android:backgroundTint="#15ffffff" />
-            <TextView
-                android:id="@+id/txtChNum"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="125"
-                android:textColor="#7af5c8"
-                android:textSize="15sp"
-                android:layout_marginVertical="8dp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_pill"
+            android:layout_marginBottom="24dp"
+            android:paddingHorizontal="16dp">
             <Button
                 android:id="@+id/btnChDown"
-                android:layout_width="44dp"
-                android:layout_height="44dp"
-                android:text="↓"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="▼"
                 android:textColor="#ffffff"
-                android:backgroundTint="#15ffffff" />
-        </LinearLayout>
+                android:textSize="12sp"
+                android:background="?android:attr/selectableItemBackgroundBorderless" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/txtChNum"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:text="125"
+                    android:textColor="#ffffff"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif-medium" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CHANNEL"
+                    android:textColor="#6d6d80"
+                    android:textSize="11sp"
+                    android:letterSpacing="0.05"
+                    android:layout_marginLeft="8dp" />
+            </LinearLayout>
+            <Button
+                android:id="@+id/btnChUp"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="▲"
+                android:textColor="#ffffff"
+                android:textSize="12sp"
+                android:background="?android:attr/selectableItemBackgroundBorderless" />
+        </RelativeLayout>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
         android:gravity="center"
-        android:orientation="horizontal">
-
+        android:paddingTop="12dp"
+        android:borderTop="1dp"
+        android:background="@android:color/transparent">
         <Button
             android:id="@+id/btnBack"
-            android:layout_width="54dp"
-            android:layout_height="48dp"
-            android:text="↩"
-            android:textColor="#666666"
-            android:backgroundTint="@android:color/transparent"
-            android:layout_marginRight="8dp" />
-
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:textColor="#52526b"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:layout_marginRight="16dp" />
         <Button
             android:id="@+id/btnHome"
-            android:layout_width="54dp"
-            android:layout_height="48dp"
-            android:text="⌂"
-            android:textColor="#666666"
-            android:backgroundTint="@android:color/transparent"
-            android:layout_marginRight="8dp" />
-
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:textColor="#52526b"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:layout_marginRight="16dp" />
         <Button
             android:id="@+id/btnMenu"
-            android:layout_width="54dp"
-            android:layout_height="48dp"
-            android:text="☰"
-            android:textColor="#666666"
-            android:backgroundTint="@android:color/transparent"
-            android:layout_marginRight="8dp" />
-
-        <Button
-            android:id="@+id/btnInput"
-            android:layout_width="54dp"
-            android:layout_height="48dp"
-            android:text="input"
-            android:textColor="#666666"
-            android:backgroundTint="@android:color/transparent" />
-
-        <Button android:id="@+id/btnMute" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Menu"
+            android:textColor="#52526b"
+            android:background="?android:attr/selectableItemBackgroundBorderless" />
     </LinearLayout>
+
+    <Button android:id="@+id/btnMute" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone"/>
 </LinearLayout>
