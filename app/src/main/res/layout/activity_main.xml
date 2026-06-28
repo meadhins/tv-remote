@@ -1,90 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:padding="24dp"
     android:background="#1a1a1a">
 
-    <TextView
-        android:id="@+id/statusText"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Initializing..."
-        android:textColor="#ffffff"
-        android:textSize="16sp"
+        android:orientation="vertical"
         android:gravity="center"
-        android:layout_marginBottom="16dp"/>
+        android:padding="16dp">
 
-    <Button
-        android:id="@+id/powerBtn"
-        android:layout_width="160dp"
-        android:layout_height="160dp"
-        android:text="POWER"
-        android:textSize="22sp"
-        android:backgroundTint="#cc0000"
-        android:textColor="#ffffff"
-        android:layout_marginBottom="12dp"/>
+        <!-- Power / Input / Mute -->
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="8dp">
+            <Button android:id="@+id/btnPower" android:layout_width="90dp" android:layout_height="60dp" android:text="⏻ Power" android:backgroundTint="#cc0000" android:textColor="#fff" android:textSize="12sp" android:layout_marginEnd="8dp"/>
+            <Button android:id="@+id/btnInput" android:layout_width="90dp" android:layout_height="60dp" android:text="Input" android:backgroundTint="#444" android:textColor="#fff" android:textSize="12sp" android:layout_marginEnd="8dp"/>
+            <Button android:id="@+id/btnMute" android:layout_width="90dp" android:layout_height="60dp" android:text="🔇 Mute" android:backgroundTint="#444" android:textColor="#fff" android:textSize="12sp"/>
+        </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="12dp">
+        <!-- Vol / Ch -->
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="8dp">
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="center" android:layout_marginEnd="24dp">
+                <Button android:id="@+id/btnVolUp" android:layout_width="90dp" android:layout_height="55dp" android:text="🔊 Vol +" android:backgroundTint="#226622" android:textColor="#fff" android:textSize="12sp" android:layout_marginBottom="4dp"/>
+                <Button android:id="@+id/btnVolDown" android:layout_width="90dp" android:layout_height="55dp" android:text="🔉 Vol -" android:backgroundTint="#226622" android:textColor="#fff" android:textSize="12sp"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="center">
+                <Button android:id="@+id/btnChUp" android:layout_width="90dp" android:layout_height="55dp" android:text="Ch ▲" android:backgroundTint="#224488" android:textColor="#fff" android:textSize="12sp" android:layout_marginBottom="4dp"/>
+                <Button android:id="@+id/btnChDown" android:layout_width="90dp" android:layout_height="55dp" android:text="Ch ▼" android:backgroundTint="#224488" android:textColor="#fff" android:textSize="12sp"/>
+            </LinearLayout>
+        </LinearLayout>
 
-        <Button
-            android:id="@+id/prevBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="◀ PREV"
-            android:backgroundTint="#555555"
-            android:textColor="#ffffff"
-            android:layout_marginEnd="12dp"/>
+        <!-- Navigation -->
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="center" android:layout_marginBottom="8dp">
+            <Button android:id="@+id/btnUp" android:layout_width="90dp" android:layout_height="55dp" android:text="▲" android:backgroundTint="#555" android:textColor="#fff" android:layout_marginBottom="4dp"/>
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal">
+                <Button android:id="@+id/btnLeft" android:layout_width="90dp" android:layout_height="55dp" android:text="◀" android:backgroundTint="#555" android:textColor="#fff" android:layout_marginEnd="4dp"/>
+                <Button android:id="@+id/btnOk" android:layout_width="90dp" android:layout_height="55dp" android:text="OK" android:backgroundTint="#886600" android:textColor="#fff" android:layout_marginEnd="4dp"/>
+                <Button android:id="@+id/btnRight" android:layout_width="90dp" android:layout_height="55dp" android:text="▶" android:backgroundTint="#555" android:textColor="#fff"/>
+            </LinearLayout>
+            <Button android:id="@+id/btnDown" android:layout_width="90dp" android:layout_height="55dp" android:text="▼" android:backgroundTint="#555" android:textColor="#fff" android:layout_marginTop="4dp"/>
+        </LinearLayout>
 
-        <Button
-            android:id="@+id/foundBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="✓ WORKED!"
-            android:backgroundTint="#007700"
-            android:textColor="#ffffff"/>
+        <!-- Menu / Home / Back -->
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="8dp">
+            <Button android:id="@+id/btnMenu" android:layout_width="90dp" android:layout_height="55dp" android:text="Menu" android:backgroundTint="#444" android:textColor="#fff" android:layout_marginEnd="8dp"/>
+            <Button android:id="@+id/btnHome" android:layout_width="90dp" android:layout_height="55dp" android:text="🏠 Home" android:backgroundTint="#444" android:textColor="#fff" android:layout_marginEnd="8dp"/>
+            <Button android:id="@+id/btnBack" android:layout_width="90dp" android:layout_height="55dp" android:text="↩ Back" android:backgroundTint="#444" android:textColor="#fff"/>
+        </LinearLayout>
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="16dp">
-
-        <EditText
-            android:id="@+id/jumpInput"
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:hint="Jump to #"
-            android:textColor="#ffffff"
-            android:textColorHint="#888888"
-            android:inputType="number"
-            android:layout_marginEnd="8dp"/>
-
-        <Button
-            android:id="@+id/jumpBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="GO"
-            android:backgroundTint="#0055cc"
-            android:textColor="#ffffff"/>
+        <!-- Number pad -->
+        <GridLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:columnCount="3" android:layout_marginTop="4dp">
+            <Button android:id="@+id/btn1" android:layout_width="90dp" android:layout_height="55dp" android:text="1" android:backgroundTint="#333" android:textColor="#fff" android:textSize="18sp" android:layout_margin="3dp"/>
+            <Button android:id="@+id/btn2" android:layout_width="90dp" android:layout_height="55dp" android:text="2" android:backgroundTint="#333" android:textColor="#fff" android:textSize="18sp" android:layout_margin="3dp"/>
+            <Button android:id="@+id/btn3" android:layout_width="90dp" android:layout_height="55dp" android:text="3" android:backgroundTint="#333" android:textColor="#fff" android:textSize="18sp" android:layout_margin="3dp"/>
+            <Button android:id="@+id/btn4" android:layout_width="90dp" android:layout_height="55dp" android:text="4" android:backgroundTint="#333" android:textColor="#fff" android:textSize="18sp" android:layout_margin="3dp"/>
+            <Button android:id="@+id/btn5" android:layout_width="90dp" android:layout_height="55dp" android:text="5" android:backgroundTint="#333" android:textColor="#fff" android:textSize="18sp" android:layout_margin="3dp"/>
+            <Button android:id="@+id/btn6" android:layout_width="90dp" android:layout_height="55dp" android:text="6" android:backgroundTint="#333" android:textColor="#fff" android:textSize="18sp" android:layout_margin="3dp"/>
+            <Button android:id="@+id/btn7" android:layout_width="90dp" android:layout_height="55dp" android:text="7" android:backgroundTint="#333" android:textColor="#fff" android:textSize="18sp" android:layout_margin="3dp"/>
+            <Button android:id="@+id/btn8" android:layout_width="90dp" android:layout_height="55dp" android:text="8" android:backgroundTint="#333" android:textColor="#fff" android:textSize="18sp" android:layout_margin="3dp"/>
+            <Button android:id="@+id/btn9" android:layout_width="90dp" android:layout_height="55dp" android:text="9" android:backgroundTint="#333" android:textColor="#fff" android:textSize="18sp" android:layout_margin="3dp"/>
+            <Button android:id="@+id/btn0" android:layout_width="90dp" android:layout_height="55dp" android:text="0" android:backgroundTint="#333" android:textColor="#fff" android:textSize="18sp" android:layout_margin="3dp" android:layout_columnSpan="3" android:layout_gravity="fill"/>
+        </GridLayout>
 
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/codeText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textColor="#aaffaa"
-        android:textSize="13sp"
-        android:gravity="center"/>
-
-</LinearLayout>
+</ScrollView>
