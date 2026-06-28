@@ -5,34 +5,60 @@
     android:background="#0d0d1f"
     android:padding="20dp">
 
-    <RelativeLayout
-        android:id="@+id/statusBarMock"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="9:41"
-            android:textColor="#aaaaaa"
-            android:textSize="12sp"
-            android:textStyle="bold" />
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="IR 38 kHz"
-                android:textColor="#7af5c8"
-                android:textSize="10sp"
-                android:background="#15ffffff"
-                android:paddingHorizontal="8dp"
-                android:paddingVertical="3dp" />
-        </LinearLayout>
-    </RelativeLayout>
+<RelativeLayout
+    android:layout_width="0dp"
+    android:layout_height="170dp"
+    android:layout_weight="1.4">
+
+    <Button
+        android:id="@+id/btnUp"
+        android:layout_width="54dp"
+        android:layout_height="46dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="↑"
+        android:textColor="#cccccc"
+        android:backgroundTint="#15ffffff" />
+
+    <Button
+        android:id="@+id/btnLeft"
+        android:layout_width="54dp"
+        android:layout_height="46dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:text="←"
+        android:textColor="#cccccc"
+        android:backgroundTint="#15ffffff" />
+
+    <Button
+        android:id="@+id/btnOk"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_centerInParent="true"
+        android:text="OK"
+        android:textColor="#f0c040"
+        android:backgroundTint="#30b48200" />
+
+    <Button
+        android:id="@+id/btnRight"
+        android:layout_width="54dp"
+        android:layout_height="46dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:text="→"
+        android:textColor="#cccccc"
+        android:backgroundTint="#15ffffff" />
+
+    <Button
+        android:id="@+id/btnDown"
+        android:layout_width="54dp"
+        android:layout_height="46dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="↓"
+        android:textColor="#cccccc"
+        android:backgroundTint="#15ffffff" />
+</RelativeLayout>
 
     <LinearLayout
         android:id="@+id/roomHeader"
