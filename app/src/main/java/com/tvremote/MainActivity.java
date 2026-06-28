@@ -45,39 +45,6 @@ public class MainActivity extends Activity {
         TextView txtVolNum = findViewById(R.id.txtVolNum);
         TextView txtChNum = findViewById(R.id.txtChNum);
 
-        // Action Dispatches
-        findViewById(R.id.btnPower).setOnClickListener(v -> send(0x08));
-        findViewById(R.id.btnMute).setOnClickListener(v -> send(0x09));
-        findViewById(R.id.btnInput).setOnClickListener(v -> send(0x0B));
-        
-        findViewById(R.id.btnVolUp).setOnClickListener(v -> {
-            if (internalVolume < 100) internalVolume += 2;
-            txtVolNum.setText(String.valueOf(internalVolume));
-            send(0x02);
-        });
-        
-        findViewById(R.id.btnVolDown).setOnClickListener(v -> {
-            if (internalVolume > 0) internalVolume -= 2;
-            txtVolNum.setText(String.valueOf(internalVolume));
-            send(0x03);
-        });
-        
-        findViewById(R.id.btnChUp).setOnClickListener(v -> {
-            internalChannel++;
-            txtChNum.setText(String.valueOf(internalChannel));
-            send(0x00);
-        });
-        
-@Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        irManager = (ConsumerIrManager) getSystemService(Context.CONSUMER_IR_SERVICE);
-
-        TextView txtVolNum = findViewById(R.id.txtVolNum);
-        TextView txtChNum = findViewById(R.id.txtChNum);
-
         // Primary Structural Power & Input Actions
         findViewById(R.id.btnPower).setOnClickListener(v -> send(0x08));
         findViewById(R.id.btnMute).setOnClickListener(v -> send(0x09));
@@ -103,7 +70,6 @@ public class MainActivity extends Activity {
             send(0x00);
         });
         
-        // FIXED: Correct ID lookup and clean lambda mapping
         findViewById(R.id.btnChDown).setOnClickListener(v -> {
             if (internalChannel > 1) internalChannel--;
             txtChNum.setText(String.valueOf(internalChannel));
@@ -122,3 +88,4 @@ public class MainActivity extends Activity {
         findViewById(R.id.btnRight).setOnClickListener(v -> send(0x06));
         findViewById(R.id.btnOk).setOnClickListener(v -> send(0x44));
     }
+}
