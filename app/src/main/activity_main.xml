@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="#1a1a1a">
+
+    <Button android:id="@+id/btnPower"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:text="POWER"
+        android:backgroundTint="#cc0000"
+        android:textColor="#ffffff"
+        android:layout_marginBottom="8dp"/>
+
+    <Button android:id="@+id/btnMute"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:text="Mute"
+        android:backgroundTint="#444444"
+        android:textColor="#ffffff"
+        android:layout_marginBottom="8dp"/>
+
+    <Button android:id="@+id/btnInput"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:text="Input"
+        android:backgroundTint="#444444"
+        android:textColor="#ffffff"
+        android:layout_marginBottom="8dp"/>
+
+    <Button android:id="@+id/btnVolUp"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:text="Volume Up"
+        android:backgroundTint="#226622"
+        android:textColor="#ffffff"
+        android:layout_marginBottom="8dp"/>
+
+    <Button android:id="@+id/btnVolDown"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:text="Volume Down"
+        android:backgroundTint="#226622"
+        android:textColor="#ffffff"
+        android:layout_marginBottom="8dp"/>
+
+    <Button android:id="@+id/btnChUp"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:text="Channel Up"
+        android:backgroundTint="#224488"
+        android:textColor="#ffffff"
+        android:layout_marginBottom="8dp"/>
+
+    <Button android:id="@+id/btnChDown"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:text="Channel Down"
+        android:backgroundTint="#224488"
+        android:textColor="#ffffff"
+        android:layout_marginBottom="8dp"/>
+
+    <Button android:id="@+id/btnUp"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:text="Up"
+        android:backgroundTint="#555555"
+        android:textColor="#ffffff"
+        android:layout_marginBottom="8dp"/>
+
+    <Button android:id="@+id/btnDown"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:text="Down"
+        android:backgroundTint="#555555"
+        android:textColor="#ffffff"
+        android:layout_marginBottom="8dp"/>
+
+    <Button android:id="@+id/btnLeft"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:text="Left"
+        android:backgroundTint="#555555"
+        android:textColor="#ffffff"
+        android:layout_marginBottom="8dp"/>
+
+    <Button android:id="@+id/btnRight"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:text="Right"
+        android:backgroundTint="#555555"
+        android:textColor="#ffffff"
+        android:layout_marginBottom="8dp"/>
+
+    <Button android:id="@+id/btnOk"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:text="OK"
+        android:backgroundTint="#886600"
+        android:textColor="#ffffff"
+        android:layout_marginBottom="8dp"/>
+
+    <Button android:id="@+id/btnMenu"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:text="Menu"
+        android:backgroundTint="#444444"
+        android:textColor="#ffffff"
+        android:layout_marginBottom="8dp"/>
+
+    <Button android:id="@+id/btnHome"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:text="Home"
+        android:backgroundTint="#444444"
+        android:textColor="#ffffff"
+        android:layout_marginBottom="8dp"/>
+
+    <Button android:id="@+id/btnBack"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:text="Back"
+        android:backgroundTint="#444444"
+        android:textColor="#ffffff"/>
+
+</LinearLayout>
