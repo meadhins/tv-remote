@@ -6,6 +6,7 @@
     android:orientation="vertical"
     android:padding="24dp">
 
+    <!-- Header Panel Readout -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -29,16 +30,18 @@
             android:layout_marginTop="4dp" />
     </LinearLayout>
 
+    <!-- Central Interactive Radial Directional Controller -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:gravity="center">
 
+        <!-- Replaced background drawable with plain background color directly -->
         <RelativeLayout
             android:layout_width="220dp"
             android:layout_height="220dp"
-            android:background="@drawable/bg_wheel">
+            android:background="#111126">
 
             <Button
                 android:id="@+id/btnUp"
@@ -73,8 +76,7 @@
                 android:textColor="#ffffff"
                 android:textSize="14sp"
                 android:fontFamily="sans-serif-black"
-                android:background="@drawable/bg_wheel"
-                android:backgroundTint="#181830" />
+                android:background="#181830" />
 
             <Button
                 android:id="@+id/btnRight"
@@ -102,11 +104,13 @@
         </RelativeLayout>
     </RelativeLayout>
 
+    <!-- Adjustment Zone Deck -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <!-- System Action Strip Row -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -120,7 +124,7 @@
                 android:layout_marginRight="6dp"
                 android:text="Power"
                 android:textColor="#ffffff"
-                android:background="@drawable/bg_pill" />
+                android:backgroundTint="#111126" />
             <Button
                 android:id="@+id/btnInput"
                 android:layout_width="0dp"
@@ -129,13 +133,14 @@
                 android:layout_marginLeft="6dp"
                 android:text="Input"
                 android:textColor="#ffffff"
-                android:background="@drawable/bg_pill" />
+                android:backgroundTint="#111126" />
         </LinearLayout>
 
+        <!-- Ergonomic Volume Slider Pill -->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:background="@drawable/bg_pill"
+            android:background="#111126"
             android:layout_marginBottom="12dp"
             android:paddingHorizontal="16dp">
             <Button
@@ -184,10 +189,11 @@
                 android:background="?android:attr/selectableItemBackgroundBorderless" />
         </RelativeLayout>
 
+        <!-- Ergonomic Channel Slider Pill -->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:background="@drawable/bg_pill"
+            android:background="#111126"
             android:layout_marginBottom="24dp"
             android:paddingHorizontal="16dp">
             <Button
@@ -237,6 +243,7 @@
         </RelativeLayout>
     </LinearLayout>
 
+    <!-- Structural Navigation System Footprint Base Divider -->
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
@@ -244,6 +251,7 @@
         android:layout_marginTop="4dp"
         android:layout_marginBottom="12dp"/>
 
+    <!-- Bottom Deck Controls -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
